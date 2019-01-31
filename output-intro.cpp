@@ -21,4 +21,5 @@ int main() // where the program will start
     paycheckAmount = hoursWorked * payrate;
     cout << "The amount of the paycheck is "
          << paycheckAmount << " dollars." << endl;
+    return 0;
 } // end
