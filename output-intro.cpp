@@ -12,14 +12,20 @@ int main() // where the program will start
 //cin >> hours; // wait for the user to type in a value and put that value into hoursWorked var
     int hoursWorked; // created a variable that can be used to store an integer
     int paycheckAmount;
-    int payrate;
+    int payRate;
 
     cout << "Enter hours worked: ";
     cin >> hoursWorked;
     cout << "Enter rate of pay: ";
-    cin >> payrate;
-    paycheckAmount = hoursWorked * payrate;
-    cout << "The amount of the paycheck is "
+    cin >> payRate;
+
+    if (hoursWorked <= 40) {
+        paycheckAmount = hoursWorked * payRate;
+    } else {
+        paycheckAmount = 40 * payRate + (hoursWorked - 40) * payRate * 1.5;
+    }
+
+    cout << "the amount of the paycheck is "
          << paycheckAmount << " dollars." << endl;
     return 0;
 } // end
